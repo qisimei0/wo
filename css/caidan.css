@@ -1,0 +1,196 @@
+/*去掉ul中每个li开头的小圆点*/
+ul{
+  list-style:none;
+}
+/*清除ul和li的间距和内边距*/
+ul,li{
+  margin:0; padding:0;
+}
+/* 设置网页整体字体大小12px */
+html{
+  font-size:12px;
+}
+/* 整个一级菜单父元素ul的样式 */
+ul.menu{
+  background-color:#ccc;
+  color:rgb(145,144,145);
+  height:35px;
+}
+/* 一级菜单ul下每个直接子元素li的统一样式 */
+ul.menu>li{
+  /* 因为要做水平菜单，所以要将每个li左浮动起来 */
+  float:left;
+  /* 如果想做选中的li顶部边框红色高亮，就需要为顶部预留1px边框 */
+  /* 暂时设置顶部边框1px，与li背景同色 */
+  border-top: 1px solid #ccc;
+}
+/* 设置一级菜单中处于奇数位置的每个菜单项的样式 */
+ul.menu>li:nth-child(odd){
+  width:90px; 
+  text-align:center;
+  /* 每个一级菜单项完整高度为35px，因为顶部为鼠标悬停在菜单时高亮显示上边框预留了1px边框，所以li的高度应该设置为35-1=34px*/
+  height:34px;
+  /* 因为li总高度=35px，但是顶部有1px边框，所以要想文本垂直居中，行高应该设置为li总高度-2倍的边框宽=35-1*2=33px */
+  line-height:33px;
+}
+/* 设置一级菜单中处于偶数位置的每个菜单项之间分割项的样式 */
+ul.menu>li:nth-child(even){
+  width: 1px;
+  height: 11px;
+  /* 因为总高度是35px，小分割线的高是11px，所以剩余高:35-11=24px，然后上下均分，所以上方的margin为12px */
+  margin: 12px 0;
+  background-color:rgb(145,144,145);
+}
+/* 当鼠标进入一级菜单中处于奇数位置的菜单项li时的样式 */
+ul.menu>li:nth-child(odd):hover{
+  background-color:#fff;
+  border-top-color: orangered;
+  cursor:pointer;
+}
+/* 每个二级菜单总是相对于所在的一级菜单项li定位，所以，一级菜单中的每个菜单项都要定义为相对定位*/
+ul.menu>li{
+  position:relative;
+}
+/* 设置所有二级菜单项的统一内容 */
+ul.menu>li>ul{
+  /* 所有二级菜单，都只有左，右，下三个边框，没有上边框 */
+  border:1px solid #ccc; 
+  border-top:0;
+  background-color:#fff;
+  /* 每个二级菜单设置为绝对定位 */
+  position:absolute;
+  /* 二级菜单通常都是相对于所在的一级菜单项下移一级菜单项的高度，但是左侧与一级菜单项对齐 */
+  top:34px;
+  /* 为了让带1px边框的二级菜单ul左侧和不带左右边框的一级菜单项li左边对其，应该将二级菜单项整体向左拉1px */
+  left:-1px;
+}
+/* 所有二级菜单中每个菜单项的统一样式 */
+ul.menu>li>ul>li{
+  display:block;
+  text-align:left;
+  padding-left:30px;
+  height:25px; 
+  line-height:25px;
+}
+/* 所有二级菜单项鼠标悬停时，都变为红字 */
+ul.menu>li>ul>li:hover{
+  color:red;
+}
+/* 专门为一级菜单中处于第三位置的li下的二级菜单设置样式 */
+ul.menu>li:nth-child(3)>ul>li{
+  width:120px;
+}
+/* 这个二级菜单中有一个水平分割线，是第四个li做的 */
+ul.menu>li:nth-child(3)>ul>li:nth-child(4){
+  height:1px;
+  /* 水平分割线与上下两个菜单项的距离应该和菜单项之间的距离相当，那么菜单项之间的距离应该等于菜单项高度-字体大小再/2：(25-12)/2约等于6，所以，margin上下设置为6px */
+  margin:6px 0;
+  background-color:#eee
+}
+/* 希望这个二级菜单淡出上浮，则起始位置应该低于当前位置，且透明度为0 */
+ul.menu>li:nth-child(3)>ul{
+  /* 如果想瞬间打开和关闭二级菜单，就用display属性显示隐藏 */
+  /* display:none; */
+  top:54px;
+  opacity:0;
+  transition:top .5s linear, opacity .5s linear;
+}
+/* 定义鼠标悬停时，目标样式属性值，应用过渡动画 */
+body>ul>li:nth-child(3):hover>ul{
+  /* 如果只做单纯的显示，就这个：*/
+  /* display:block;  */
+  top:34px;
+  opacity:1;
+}
+/* 透明度虽然让二级菜单看不到，但是却可以点到，或遮挡下方元素，所以应该附加高度和宽度为0的变化，但是不要应用过渡效果 */
+ul.menu>li:nth-child(3)>ul{
+  width:0px;
+  height:0px;
+  overflow:hidden;
+}
+body>ul>li:nth-child(3):hover>ul{
+  width:153px;
+  height:139px;
+}
+/* 修改一级菜单中第7个li中的二级菜单的样式 */
+/* ul.menu>li:nth-child(7)>ul{
+  width:170px;
+  height:52px;
+} */
+ul.menu>li:nth-child(7)>ul>li{
+  float:left;
+}
+ul.menu>li:nth-child(7)>ul>li:nth-child(odd){
+  width:40px;
+}
+ul.menu>li:nth-child(7)>ul>li:nth-child(even){
+  padding-left:10px
+}
+/* 二级菜单隐藏时的起始样式（含transition和overflow） */
+ul.menu>li:nth-child(7)>ul{
+  /* 如果只做单纯的显示，就这个： */
+  /* display:none; */
+  width:0px; height:0px;
+  opacity:0;
+  /* 只要动画效果中包含大小变化，都要加overflow:hidden，防止内容溢出 */
+  overflow:hidden;
+  transition:all .5s linear;
+}
+/* 当一级菜单项鼠标悬停时，二级菜单显示时的目标样式 */
+ul.menu>li:nth-child(7):hover>ul{
+  /* 如果只做单纯的显示，就这个：*/
+  /* display:block;  */
+  width:170px;
+  height:52px;
+  opacity:1;
+}
+/* 二级菜单套路
+1. 先做一级菜单
+2. 在一级菜单项内添加二级菜单ul，让二级菜单ul相对于一级菜单项li绝对定位
+3. 设置二级菜单ul的样式
+4. 暂时将设置好样式的二级菜单ul，隐藏起来，当鼠标进入一级菜单项li时，让二级菜单ul显示出来
+5. 添加动画效果： 
+  5.1 定义二级菜单隐藏时的css属性——起始状态的样式——在起始样式中加transition
+  5.2. 定义一级菜单项鼠标悬停时，二级菜单显示时的样式
+  */
+ /* 设置的是第9个li下的ul的样式 */
+ ul.menu>li:nth-child(9)>ul{
+   width:90px;
+ }
+ ul.menu>li:nth-child(9)>ul>li{
+   font-weight:bold;
+ }
+ ul.menu>li:nth-child(9)>ul>li li{
+   font-weight:normal;
+ }
+ ul.menu>li:nth-child(9)>ul>li:first-child{
+   height:130px;
+ }
+ ul.menu>li:nth-child(9)>ul>li:last-child{
+   height:100px;
+ }
+ /* 二级菜单隐藏时的起始样式（含transition和overflow的） */
+ ul.menu>li:nth-child(9)>ul{
+   /* 如果只做单纯的显示，就这个： */
+   /* display:none; */
+   height:0px;
+   opacity:0;
+   overflow:hidden;
+   transition:all .5s linear;
+ }
+ /* 一级菜单项鼠标悬停时，二级菜单项显示的目标样式 */
+ ul.menu>li:nth-child(9):hover>ul{
+   /* 如果只做单纯的显示，就这个：*/
+   /* display:block; */
+   opacity:1;
+   height:231px; 
+ }
+ /* 因为这个二级菜单包含两级ul，三级li */
+ /* 所以，当鼠标进入二级ul下的大li时，li的字体不变味红色，而是保持原样 */
+ ul.menu>li:nth-child(9):hover>ul>li{
+   color:rgb(145,144,145);
+ }
+ /* 只有当鼠标进入最子一级li时，li的字体才变为红色 */
+ ul.menu>li:nth-child(9)>ul>li li:hover{
+   color:red;
+ }

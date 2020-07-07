@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>2020旅游景点、旅游攻略、热门旅游线路 - 飞猪</title>
+		<meta name="description" content="飞猪为您提供2020热门特价的景点，旅游攻略以及门票预订，全程采用支付宝担保交易，安全、可靠、有保证。"/>
+		<link rel="shortcut icon" href="//g.alicdn.com/trip/tools/img/favicon.ico?20131130" type="image/icon-x" />
+		<title></title>
+		<meta name="keywords" content="旅游，旅游攻略，2020旅游攻略"/>
+		<link rel="stylesheet" type="text/css" href="css1/icon1/iconfont.css"/>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				font-size: 12px;
+				color: #6c6c6c;
+				/* background-color: yellow; */
+			}
+			a{
+				text-decoration: none;
+			}
+			ul>li{
+				list-style: none;
+			}
+			.header{
+				height: 25px;
+				background-color: #f2f2f2;
+			}
+			.header .header_content{
+				width: 990px;
+				margin: 0 auto;
+			}
+			.header .header_content .header_left {
+				line-height: 25px;
+			}
+			.header .header_content .header_left span:first-child{
+				margin-right: 20px;
+			}
+			.header .header_content .header_left span:first-child:hover{
+				color:#FFC900 ;
+				cursor: pointer;
+			}
+			.header .header_content .header_left a:hover{
+				color:#FFC900 ;
+				cursor: pointer;
+			}
+			.header .header_content ul {
+				float: right;
+
+			}
+			.header .header_content ul li{
+				float: left;
+				position: relative;
+			}
+			.header .header_content ul li:first-child{
+				width: 85px;
+				padding: 0 6px;
+				text-align: center;
+				margin-left: 10px;
+			}
+			.header .header_content .header_left>ul>li:first-child:hover{
+				background-color: #fff;
+				border: 1px solid #ccc;
+			}
+			
+			.header .header_content ul li:first-child:hover ul li{
+				background-color: #fff;
+				display: block;
+				border-top:0;
+			}
+			.header .header_content ul li:first-child ul{
+				position:absolute;
+				top:25px;
+				left:-11px;
+			}
+			.header .header_content ul li:first-child ul li {
+				width: 110px;
+				height: 110px;
+				display:none;
+				border: 1px solid #ccc;
+				border-top:0;
+			}
+			.header .header_content ul li span{
+				font-size: 10px;
+			}
+			.header .header_content ul li:first-child ul li img{
+				margin-top: 5px;
+			}
+			.header .header_content .header_left>ul>li:nth-child(2){
+				width: 73px;
+				padding: 0 6px;
+				position: relative;
+			}
+			.header .header_content ul li:nth-child(2):hover{
+				background-color: #fff;
+			}
+			
+			.header .header_content .header_left>ul>li:nth-child(2):hover{
+				background-color: #fff;
+				border: 1px solid #ccc;
+				
+			}
+			.header .header_content ul li:nth-child(2):hover ul{
+				display: block;
+			}
+			.header .header_content ul li:nth-child(2) ul{
+				position:absolute;
+				top:25px;
+				left:-1px;
+				background-color: #fff;
+				border: 1px solid #ccc;
+				border-top: 0;
+				display: none;
+			}
+			.header .header_content ul li:nth-child(2) ul li{
+				padding: 0;
+				margin-left: 0px;
+				text-align: center;
+				width: 85px;
+			}
+			.header .header_content ul li ul li a{
+				text-align: center;
+			}
+			.header .header_content .header_left ul li ul li a:hover{
+				color: red;
+			}
+			.header .header_content ul>li:nth-child(3){
+				margin:0 10px 0 5px;
+			}
+			
+			.header .header_content .header_left>ul>li:nth-child(4):hover{
+				background-color: #fff;
+				border: 1px solid #ccc;
+			}
+			.header .header_content .header_left>ul>li:nth-child(4){
+				width: 52px;
+				padding: 0 6px;
+				position: relative;
+			}
+			.header .header_content ul li:nth-child(4):hover ul{
+				display: block;
+			}
+			.header .header_content ul li:nth-child(4) ul{
+				position:absolute;
+				top:25px;
+				left:-1px;
+				background-color: #fff;
+				border: 1px solid #ccc;
+				border-top: 0;
+				width: 73px;
+				display: none;
+			}
+			.header .header_content ul li:nth-child(4) ul li{
+				padding: 0;
+				margin-left: 0px;
+				text-align: center;
+				width: 73px;
+			}
+			.header .header_content .header_left>ul>li:nth-child(5){
+			  width: 1px;
+			  height: 11px;
+			  margin: 7px 10px;
+			  background-color:rgb(145,144,145);
+			}
+			.header .header_content .header_left>ul>li:nth-child(7){
+				margin: 0 10px;
+			}
+			.header .header_content ul li:nth-child(8):hover{
+				background-color: #fff;
+				border: 1px solid #ccc;
+			}
+			.header .header_content .header_left>ul>li:nth-child(8){
+				width: 65px;
+				padding: 0 6px;
+				position: relative;
+			}
+			.header .header_content ul li:nth-child(8):hover ul{
+				display: block;
+			}
+			.header .header_content ul li:nth-child(8) ul{
+				position:absolute;
+				top:25px;
+				left:-1px;
+				background-color: #fff;
+				border: 1px solid #ccc;
+				border-top: 0;
+				width: 77px;
+				display: none;
+			}
+			.header .header_content ul li:nth-child(8) ul li{
+				padding: 0;
+				margin-left: 0px;
+				text-align: center;
+				width: 77px;
+			}
+			.header .header_content ul li:nth-child(10):hover{
+				background-color: #fff;
+				border: 1px solid #ccc;
+			}
+			.header .header_content .header_left>ul>li:nth-child(10){
+				width: 65px;
+				padding: 0 6px;
+				position: relative;
+				font-weight: 700;
+			}
+			.header .header_content ul li:nth-child(10):hover ul{
+				display: block;
+			}
+			.header .header_content ul li:nth-child(10) ul{
+				position:absolute;
+				top:25px;
+				right:-1px;
+				background-color: #fff;
+				border: 1px solid #ccc;
+				border-top: 0;
+				width: 500px;
+				height: 250px;
+				/* display: none; */
+			}
+			.header .header_content ul li:nth-child(10) ul li{
+				padding: 0;
+				margin-left: 0px;
+				text-align: center;
+				/* width: 77px; */
+			}
+			.header .header_content ul li:nth-child(10) li{
+				border: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header_content">
+				<div class="header_left">
+					<span>飞猪</span>
+					<span>Hi，最近想去哪里玩？</span>
+					
+						<a href="#">请登录</a>
+						<a href="#">免费注册</a>
+					  <ul>
+					  	<li>
+								<a href="#">手机客户端</a>
+								<span class="iconfont icon-jiantouxiangxia"></span>
+							  <ul>
+							  	<li><img src="img/erweima.jpg" ></li>
+							  </ul>
+							</li>
+					  	<li>
+								<a href="#">我的淘宝</a>
+								<span class="iconfont icon-jiantouxiangxia"></span>
+							  <ul>
+							  	<li><a href="#">已买到的宝贝</a></li>
+							  	<li><a href="#">我的足迹</a></li>
+							  	<li><a href="#">飞猪旅行达人</a></li>
+							  </ul>
+							</li>
+					  	<li><a href="#">购物车</a></li>
+					  	<li><a href="#">收藏夹</a>
+							<span class="iconfont icon-jiantouxiangxia"></span>
+							    <ul>
+							    	<li><a href="#">收藏的宝贝</a></li>
+							    	<li><a href="#">收藏的店铺</a></li>
+							    </ul>
+							</li>
+					  	<li><a href="#"></a></li>
+					  	<li><a href="#">服务中心</a></li>
+					  	<li><a href="#">飞猪规则</a></li>
+					  	<li><a href="#">商家中心</a>
+							    <span class="iconfont icon-jiantouxiangxia"></span>
+							    <ul>
+							    	<li><a href="#">招商入驻</a></li>
+							    	<li><a href="#">商家规则</a></li>
+							    	<li><a href="#">培训中心</a></li>
+							    	<li><a href="#">商家品控</a></li>
+										<li><a href="#">活动中心</a></li>
+										<li><a href="#">商家服务</a></li>
+										<li><a href="#">里程发票</a></li>
+							    </ul>
+							</li>
+					  	<li><a href="#">淘宝</a></li>
+					  	<li>
+								<a href="#">网站导航</a>
+								<span class="iconfont icon-jiantouxiangxia"></span>
+							 <ul>
+							 	<li>机票
+							 	<ul>
+							 		<li><a href="#">国内机票</a></li>
+							 		<li><a href="#">国内机票</a></li>
+							 		<li><a href="#">国内机票</a></li>
+							 		<li><a href="#">国内机票</a></li>
+							 		<li><a href="#">国内机票</a></li>
+							 		<li><a href="#">国内机票</a></li>
+							 		
+							 	</ul>
+								</li>
+								<li></li>
+								<li>酒店
+								<ul>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									
+								</ul>
+								</li>
+								<li></li>
+								<li>客栈
+								<ul>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									
+								</ul>
+								</li>
+								<li></li>
+								<li>签证
+								<ul>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									
+								</ul>
+								</li>
+								<li></li>
+								<li>景点门票
+								<ul>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									
+								</ul>
+								</li>
+								<li></li>
+								<li>虚假线路
+								<ul>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									<li><a href="#">国内机票</a></li>
+									
+								</ul>
+								</li>
+							 </ul>
+							
+					  </ul>
+				</div>
+				
+			</div>
+			
+		</div>
+	
+	</body>
+</html>

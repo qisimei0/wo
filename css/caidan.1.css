@@ -1,0 +1,142 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+ul{
+	list-style: none;
+}
+ul,li{
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-size: 12px;
+}
+ul.menu{
+	background-color: #ccc;
+	color: rgb(145,144,145);
+	height: 35px;
+}
+ul.menu>li{
+	float: left;
+	border-top: 1px solid #ccc;
+	
+}
+ul.menu>li:nth-child(odd){
+	width: 90px;
+	text-align: center;
+	height: 34px;
+	line-height: 33px;
+}
+ul.menu>li:nth-child(even){
+	width: 1px;
+	height: 11px;
+	margin: 12px 0;
+	background-color: rgb(145,144,145);
+}
+ul.menu>li:nth-child(odd):hover{
+	background-color: #fff;
+	border-top-color: orangered;
+	cursor: pointer;
+}
+ul.menu>li{
+	position: relative;
+}
+ul.menu>li>ul{
+	border: 1px solid #ccc;
+	border-top: 0;
+	background-color: #fff;
+	position: absolute;
+	top: 34px;
+	left: -1px;
+}
+ul.menu>li>ul>li{
+	display: block;
+	text-align: left;
+	padding-left: 30px;
+	height: 25px;
+	line-height: 25px;
+}
+ul.menu>li>ul>li:hover{
+	color: red;
+}
+ul.menu>li:nth-child(3)>ul>li{
+	width: 120px;
+}
+ul.menu>li:nth-child(3)>ul>li:nth-child(4){
+	height: 1px;
+	margin: 6px 0;
+	background-color: #eee;
+}
+ul.menu>li:nth-child(3)>ul{
+	top: 54px;
+	opacity: 0;
+	transition: top .5s linear,opacity .5s linear;
+}
+ul.menu>li:nth-child(3):hover>ul{
+	top: 34px;
+	opacity: 1;
+}
+ul.menu>li:nth-child(3)>ul{
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+ul.menu>li:nth-child(3):hover>ul{
+	width: 153px;
+	height: 139px;
+}
+ul.menu>li:nth-child(7)>ul>li{
+	float: left;
+}
+ul.menu>li:nth-child(7)>ul>li:nth-child(odd){
+	width: 40px;
+}
+ul.menu>li:nth-child(7)>ul>li:nth-child(even){
+	padding-left: 10px;
+}
+ul.menu>li:nth-child(7)>ul{
+	width: 0;
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: all .5s linear;
+}
+ul.menu>li:nth-child(7):hover>ul{
+	width: 170px;
+	height: 52px;
+	opacity: 1;
+}
+ul.menu>li:nth-child(9)>ul{
+	width: 90px;
+}
+ul.menu>li:nth-child(9)>ul>li{
+	font-weight: 700;
+}
+ul.menu>li:nth-child(9)>ul>li li{
+	font-weight: 400;
+}
+ul.menu>li:nth-child(9)>ul>li:first-child{
+	height: 130px;
+}
+ul.menu>li:nth-child(9)>ul>li:last-child{
+	width: 100px;
+}
+ul.menu>li:nth-child(9)>ul{
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: all .5s linear;
+}
+ul.menu>li:nth-child(9):hover>ul{
+	opacity: 1;
+	height: 231px;
+}
+ul.menu>li:nth-child(9):hover>ul>li{
+	color: rgb(145,144,145);
+}
+ul.menu>li:nth-child(9)>ul>li li:hover{
+	color: red;
+}
+
+
